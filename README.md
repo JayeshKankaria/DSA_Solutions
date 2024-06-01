@@ -1,2 +1,2 @@
 # DSA_Solutions
-DSA Solved Problems Leetcode and GeekforGeeks
+DSA Solved Problems Leetcode
