@@ -24,7 +24,7 @@ class Solution {
         for (int r = 0; r < nums.length; r++) 
         {
             sum += nums[r];
-            while (sum > g && l <= r) 
+            while (sum > g) 
             {
                 sum -= nums[l];
                 l++;
