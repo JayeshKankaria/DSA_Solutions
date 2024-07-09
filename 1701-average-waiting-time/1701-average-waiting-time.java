@@ -2,7 +2,7 @@ class Solution {
     public double averageWaitingTime(int[][] customers) 
     {
         int n = customers.length;
-        int i =0,curr_time=1,time_prepare=0;
+        int i =0,curr_time=customers[0][0],time_prepare=0;
         double wait_time=0.0;
         while(i<n)
         {
