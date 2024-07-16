@@ -4,12 +4,13 @@ class Solution
     {
         int l=0;
         int r=1;
-        int maxP=0;
+        int maxP = 0;
+        
         while(r<prices.length)
         {
             if(prices[l]<prices[r])
             {
-                maxP=Math.max(maxP,prices[r]-prices[l]);
+                maxP = Math.max(maxP,prices[r]-prices[l]);
             }
             else
             {
@@ -18,6 +19,5 @@ class Solution
             r++;
         }
         return maxP;
-
     }
 }
