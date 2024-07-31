@@ -1,32 +1,28 @@
 class Solution 
 {
-    private Map<String, Integer> cache;
-    public int change(int amount, int[] coins) 
+    Map<String,Integer> mp;
+    public int change(int amount, int[] coins)
     {
-        cache = new HashMap<>();
-        return dfs(0, 0, amount, coins);
+        mp =new HashMap<>();
+        return dfs(amount,0,coins);
     }
-    private int dfs(int i, int a, int amount, int[] coins) 
+    public int dfs(int a,int i,int[] coins)
     {
-        if (a == amount) 
+        if (a == 0)
         {
             return 1;
         }
-        if (a > amount) 
+        if(a<0 || i == coins.length) 
         {
             return 0;
         }
-        if (i == coins.length) 
+        String key = a + "-" + i;
+        if (mp.containsKey(key)) 
         {
-            return 0;
+            return mp.get(key);
         }
-        String key = i + "," + a;
-        if (cache.containsKey(key)) 
-        {
-            return cache.get(key);
-        }
-        int result = dfs(i, a + coins[i], amount, coins) + dfs(i + 1, a, amount, coins);
-        cache.put(key, result);
+        int result = dfs(a-coins[i],i,coins) +dfs(a,i+1,coins);
+        mp.put(key,result);
         return result;
     }
 }
