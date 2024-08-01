@@ -6,7 +6,7 @@ class Solution {
         {
             row[i] = 1;
         }
-        for (int i = m-1; i > 0; i--) 
+        for (int i = m-2; i >= 0; i--) 
         {
             int[] newRow = new int[n];
             newRow[n - 1] = 1; 
