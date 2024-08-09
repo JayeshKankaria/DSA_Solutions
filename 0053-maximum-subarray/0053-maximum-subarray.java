@@ -5,12 +5,12 @@ class Solution {
         int curSum=0;
         for(int i:nums)
         {
-            if (curSum<0)
+            if(curSum<0)
             {
                 curSum=0;
             }
-            curSum= curSum+i;
-            maxSub= Math.max(curSum,maxSub);
+            curSum=curSum+i;
+            maxSub = Math.max(maxSub,curSum);
         }
         return maxSub;
     }
