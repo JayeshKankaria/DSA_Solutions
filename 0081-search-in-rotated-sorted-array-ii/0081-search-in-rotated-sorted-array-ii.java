@@ -33,7 +33,7 @@ class Solution {
             } 
             else 
             {
-                System.out.println("r"+r);
+                //System.out.println("r"+r);
                 // Right side is sorted
                 if (nums[mid] < target && target <= nums[r]) 
                 {
